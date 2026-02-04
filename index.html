@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Yohith 💛</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #fff7e6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #ff4d88;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.2s ease;
+    }
+
+    #yesBtn {
+      background-color: #ff4d88;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ccc;
+    }
+
+    .shake {
+      animation: shake 0.4s;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear forwards;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="content">
+    <h1>Hey Yohith 💛</h1>
+    <p>Do you want to see the birthday message your girlfriend has for you?</p>
+    <button id="yesBtn" onclick="showMessage()">Yes 💕</button>
+    <button id="noBtn" onclick="shakeNo()">No 🙄</button>
+  </div>
+
+  <script>
+    function shakeNo() {
+      const noBtn = document.getElementById("noBtn");
+      noBtn.classList.add("shake");
+      setTimeout(() => {
+        noBtn.classList.remove("shake");
+      }, 400);
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.inn
